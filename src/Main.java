@@ -31,6 +31,34 @@ public class Main {
             }
         }
 
+        // Controllo quale metodo richiamare per l'operazione
+        String result = "prova";
+        switch(operation.toUpperCase()){
+            case "SOMMA":
+                // Richiamo il metodo della somma
+                break;
+            case "DIFFERENZA":
+                // Richiamo il metodo della differenza
+                break;
+            case "MOLTIPLICAZIONE":
+                // Richiamo il metodo della moltiplicazione
+                break;
+            case "DIVISIONE":
+                // Richiamo il metodo della divisione
+                break;
+            case "POTENZA":
+                // Richiamo il metodo della potenza
+                break;
+            case "PARI O DISPARI":
+                // Richiamo il metodo per vedere se è pari o dispari
+                break;
+            default:
+                System.out.println("Errore: operazione non riconosciuta");
+                break;
+        }
+
+        // Stampo il risultato
+        System.out.println(result);
     }
 
 }
