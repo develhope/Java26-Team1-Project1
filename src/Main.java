@@ -1,6 +1,7 @@
 public class Main {
-
     public static void main(String[] args) {
+
+
 
     } public static String moltiplicazione (int a ,int b){
     String result;
@@ -16,6 +17,12 @@ public class Main {
             res = res * num;
         }
         return res;
-    }
 
+    }
+    // method to calculate the addition of two integers
+    public static String addition(int a, int b){
+        String result;
+        result = "" + (a + b);
+        return result;
+    }
 }
