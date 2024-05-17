@@ -8,5 +8,11 @@ public class Main {
     result = "risultato: " + a * b;
         return result;
     }
+    public static String sottrazione(int a, int b){
+        String result;
+        result = "" + (a - b);
+        return result;
+    }
+
 
 }
