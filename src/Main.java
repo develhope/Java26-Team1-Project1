@@ -31,4 +31,10 @@ public class Main {
         result = "" + (a + b);
         return result;
     }
+    public static String divisione (int a ,int b){
+        String result;
+
+        result = "risultato: " + a / b + " resto: " + a % b;
+        return result;
+    }
 }
