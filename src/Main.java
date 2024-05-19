@@ -14,6 +14,7 @@ public class Main {
         if(pot == 0){
             res = 1;
         }
+
         return res;
     }
 
