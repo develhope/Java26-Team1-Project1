@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
         String expression = "1+2=";
 
-        String operation = "SOMMA"; // Dovrebbe richiamare il metodo che riconosce l'operazione
+        String operation = riconosciOperazione(expression);
 
         // Trasformo la stringa in un array di char
         char[] expressionChars = expression.toCharArray();
@@ -94,5 +94,27 @@ public class Main {
 
         result = "risultato: " + a / b + " resto: " + a % b;
         return result;
+    }
+
+    public static String riconosciOperazione(String expression){
+        // controllo quale operatore contiene
+        if(expression.contains("+")){
+            return "SOMMA";
+        }
+        else if(expression.contains("-")){
+            return "DIFFERENZA";
+        }
+        else if(expression.contains("*") || expression.contains("x") || expression.contains("X")){
+            return "MOLTIPLICAZIONE";
+        }
+        else if(expression.contains("/") || expression.contains(":")){
+            return "DIVISIONE";
+        }
+        else if(expression.contains("^") || expression.contains("pow")){
+            return "POTENZA";
+        }
+        else {
+            return "NON RICONOSCIUTO";
+        }
     }
 }
