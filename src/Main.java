@@ -1,7 +1,7 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
-
-
         double[] arrayCalcolatrice = {11.7, 3.2, 3.4, 5, 5};
         int numero = 5;
         System.out.println("Il numero inserito è: " + numero);
@@ -24,6 +24,67 @@ public class Main {
                 break;
             case '-':
                 System.out.println("Sottrazione dei numeri: " + sottrazione(arrayCalcolatrice));
+        }
+
+    }
+
+    // Creazione del metodo della somma di più numeri sulla calcolatrice.
+    public static double somma(double[] numeriSomma) {
+        double risultato = 0;
+        for (int i = 0; i < numeriSomma.length; i++) {
+            risultato = risultato + numeriSomma[i];
+        }
+        return risultato;
+    }
+
+    // Creazione del metodo della moltplicazione di più numeri sulla calcolatrice.
+    public static double moltiplicazione(double[] numeriMoltiplicazione) {
+        double risultato = 1;
+        for (int i = 0; i < numeriMoltiplicazione.length; i++) {
+            risultato = risultato * numeriMoltiplicazione[i];
+        }
+        return risultato;
+    }
+
+    // Creazione del metodo della divisione di più numeri sulla calcolatrice.
+    public static double divisione(double[] numeriDivisione) {
+      
+        return result;
+    }
+
+    // Creazione del metodo della sottrazione di più numeri sulla calcolatrice.
+    public static double sottrazione(double[] numeriSottrazione) {
+        double risultato = 0;
+        for (int i = 0; i < numeriSottrazione.length; i++) {
+            risultato = risultato - numeriSottrazione[i];
+        }
+        return risultato;
+    }
+
+    //Creazione del metodo per controllo di un numero che sia pari o dispari
+    public static boolean controlloDelNumero(int numero) {
+        return (numero % 2 == 0);
+    }
+
+    public static String riconosciOperazione(String expression){
+        // controllo quale operatore contiene
+        if(expression.contains("+")){
+            return "SOMMA";
+        }
+        else if(expression.contains("-")){
+            return "DIFFERENZA";
+        }
+        else if(expression.contains("*") || expression.contains("x") || expression.contains("X")){
+            return "MOLTIPLICAZIONE";
+        }
+        else if(expression.contains("/") || expression.contains(":")){
+            return "DIVISIONE";
+        }
+        else if(expression.contains("^") || expression.contains("pow")){
+            return "POTENZA";
+        }
+        else {
+            return "NON RICONOSCIUTO";
         }
     }
 
